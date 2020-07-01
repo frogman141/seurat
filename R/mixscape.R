@@ -544,6 +544,7 @@ RunMixscape <- function(
   new.class.name = "mixscape_class",
   min.de.genes = 5,
   de.assay = "RNA",
+  test.use="wilcox",
   logfc.threshold = 0.25,
   iter.num = 10,
   verbose = TRUE
@@ -589,7 +590,8 @@ RunMixscape <- function(
       object.gene, 
       ident.1 = gene, 
       de.assay = de.assay, 
-      logfc.threshold = logfc.threshold, 
+      logfc.threshold = logfc.threshold,
+      test.use = test.use,
       labels = labels
     )
     prtb_markers[[gene]] <- de.genes
